@@ -1,0 +1,75 @@
+<header class="main-header">
+  <div class="header-container">
+    
+    <!-- Logo y título -->
+    <div class="logo-section">
+      <div class="logo-circle">
+        <img src="/assets/images/logo-icon.png" alt="NutriAlarm" class="logo-icon">
+      </div>
+      <div class="brand-info">
+        <span class="brand-name">nutri<span class="brand-accent">alarm</span></span>
+        <span class="tagline">Creador de menús inteligente</span>
+      </div>
+    </div>
+
+    <!-- Navegación principal -->
+    <nav class="main-navigation">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link active" (click)="navigateTo('home')">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#menus" class="nav-link" (click)="navigateTo('menus')">Menús</a>
+        </li>
+        <li class="nav-item">
+          <a href="#nutrition" class="nav-link" (click)="navigateTo('nutrition')">Nutrición</a>
+        </li>
+        <li class="nav-item">
+          <a href="#profile" class="nav-link" (click)="navigateTo('profile')">Perfil</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sección de búsqueda -->
+    <div class="search-section">
+      <div class="search-container">
+        <input 
+          type="text" 
+          class="search-input"
+          placeholder="Buscar menús, ingredientes..."
+          [(ngModel)]="searchQuery"
+          (keyup.enter)="onSearch()">
+        <button class="search-button" (click)="onSearch()">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Perfil de usuario -->
+    <div class="user-section">
+      <div class="notification-bell">
+        <svg class="bell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+        <span class="notification-badge">2</span>
+      </div>
+      
+      <div class="user-profile" (click)="openProfile()">
+        <div class="user-avatar">
+          <img src="/assets/images/user-avatar.jpg" alt="Usuario" class="avatar-image">
+        </div>
+        <div class="user-info">
+          <span class="user-name">Usuario</span>
+          <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="6,9 12,15 18,9"></polyline>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
