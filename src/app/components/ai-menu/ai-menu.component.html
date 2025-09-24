@@ -1,0 +1,9 @@
+<div class="ai-menu-block">
+  <h2>Menú generado con Inteligencia Artificial</h2>
+  <div class="days-row">
+    <div class="day-item" *ngFor="let day of days">
+      <span>{{day.name}}</span>
+      <img [src]="day.foodImg" alt="{{day.food}}" class="food-avatar"/>
+    </div>
+  </div>
+</div>

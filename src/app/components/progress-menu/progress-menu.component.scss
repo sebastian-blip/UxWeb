@@ -1,0 +1,23 @@
+.progress-menu {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.progress-step {
+  background: #f3f3f3;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  padding: 0.7rem 2rem;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  transition: background 0.2s;
+}
+
+.progress-step.active {
+  background: #ff6b6b;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(255,107,107,0.16);
+}
