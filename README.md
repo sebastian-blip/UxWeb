@@ -73,57 +73,6 @@ ng add @angular/material
 npm install bootstrap
 ```
 
-## 🎨 Guía de Desarrollo
-
-### Convenciones de Nomenclatura
-- **Componentes**: PascalCase (ej. `HeaderComponent`)
-- **Archivos**: kebab-case (ej. `header-component.ts`)
-- **Variables**: camelCase (ej. `isMenuOpen`)
-- **Clases CSS**: kebab-case (ej. `.main-header`)
-
-### Estructura de Componentes
-```typescript
-@Component({
-  selector: 'app-component-name',
-  templateUrl: './component-name.component.html',
-  styleUrls: ['./component-name.component.scss']
-})
-export class ComponentNameComponent implements OnInit {
-  // Propiedades
-  // Constructor
-  // Métodos del ciclo de vida
-  // Métodos personalizados
-}
-```
-
-## 📱 Responsive Design
-
-El proyecto sigue un enfoque **Mobile First** con los siguientes breakpoints:
-
-- **Mobile**: 320px - 767px
-- **Tablet**: 768px - 1023px  
-- **Desktop**: 1024px - 1439px
-- **Large Desktop**: 1440px+
-
-## 🎯 Implementación de Wireframes
-
-### Fase 1: Componentes Base
-- [ ] Header/Navigation
-- [ ] Footer
-- [ ] Sidebar (si aplica)
-- [ ] Layout principal
-
-### Fase 2: Páginas Principales
-- [ ] Landing Page
-- [ ] Página de servicios
-- [ ] Página de contacto
-- [ ] Página about
-
-### Fase 3: Componentes Avanzados
-- [ ] Formularios
-- [ ] Cards/Tarjetas
-- [ ] Modales
-- [ ] Carousel/Slider
 
 ## 📊 Herramientas de Desarrollo
 
@@ -147,7 +96,7 @@ ng generate component components/component-name
 ng generate service services/service-name
 ```
 
-## 🎨 Guía de Estilos
+## Guía de Estilos
 
 ### Colores Principales
 ```scss
@@ -164,23 +113,13 @@ $font-family-primary: 'Your-Primary-Font', sans-serif;
 $font-family-secondary: 'Your-Secondary-Font', serif;
 ```
 
-## 📝 Documentación Adicional
+## Documentación Adicional
 
 - `/wireframes/` - Contiene los wireframes originales
 - `/docs/` - Documentación técnica adicional
 - `/style-guide/` - Guía de estilos detallada
 
-## 🤝 Contribución
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit tus cambios (`git commit -m 'Agregar nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Abre un Pull Request
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ## 📞 Contacto
 
@@ -188,5 +127,3 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 **GitHub**: [@sebastian-blip](https://github.com/sebastian-blip)
 
 ---
-
-⭐ Si este proyecto te resulta útil, ¡no olvides darle una estrella!
