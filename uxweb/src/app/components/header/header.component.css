@@ -29,28 +29,18 @@
 }
 
 /* Sección del logo */
+
 .logo-section {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  flex-shrink: 0;
-}
-
-.logo-circle {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-coral));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(79, 205, 196, 0.3);
+  justify-content: flex-start; /* Alinea a la izquierda */
+  height: 60px; /* Ajusta según diseño */
+  padding-left: 16px; /* Opcional: espacio a la izquierda */
 }
 
 .logo-icon {
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) invert(1);
+  height: 40px; /* Ajusta el tamaño del logo */
+  width: auto;
 }
 
 .brand-info {
@@ -259,4 +249,29 @@
   .user-name {
     display: none;
   }
+}
+
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logout-button:hover {
+  background: #d32f2f;
+}
+
+.logout-icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
 }

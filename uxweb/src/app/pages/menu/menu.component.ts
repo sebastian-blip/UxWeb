@@ -13,7 +13,6 @@ import { MainActionsComponent } from '../../components/main-actions/main-actions
   standalone: true,
   imports: [
     CommonModule,
-    ProgressMenuComponent,
     PreferencesBlockComponent,
     AiMenuComponent,
     NutriCheckBlockComponent,
