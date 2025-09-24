@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-ai-menu',
+  standalone: true,
+  imports: [CommonModule], 
   templateUrl: './ai-menu.component.html',
   styleUrls: ['./ai-menu.component.scss']
 })
