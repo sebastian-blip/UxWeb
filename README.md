@@ -2,11 +2,11 @@
 
 Repositorio para la maquetación web en Angular basada en wireframes y diseños UX/UI.
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 
 Este proyecto tiene como objetivo implementar la maquetación de un diseño web utilizando Angular, siguiendo las mejores prácticas de UX/UI y manteniendo una estructura de código limpia y escalable.
 
-## 🚀 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Angular** (Framework principal)
 - **TypeScript** 
@@ -15,7 +15,7 @@ Este proyecto tiene como objetivo implementar la maquetación de un diseño web 
 - **Angular Material** (Componentes UI)
 - **Bootstrap** (Grid System & Utilities)
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 src/
@@ -39,7 +39,7 @@ src/
 └── wireframes/            # Documentación de diseño
 ```
 
-## 🛠️ Instalación y Configuración
+## Instalación y Configuración
 
 ### Prerrequisitos
 - Node.js (v16 o superior)
@@ -74,7 +74,7 @@ npm install bootstrap
 ```
 
 
-## 📊 Herramientas de Desarrollo
+## Herramientas de Desarrollo
 
 ```bash
 # Ejecutar en modo desarrollo
@@ -119,11 +119,5 @@ $font-family-secondary: 'Your-Secondary-Font', serif;
 - `/docs/` - Documentación técnica adicional
 - `/style-guide/` - Guía de estilos detallada
 
-
-
-## 📞 Contacto
-
-**Desarrollador**: Sebastian Betancourt
-**GitHub**: [@sebastian-blip](https://github.com/sebastian-blip)
 
 ---
