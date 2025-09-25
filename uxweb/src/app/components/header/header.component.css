@@ -1,277 +1,136 @@
-/* Variables de colores basadas en el diseño NutriAlarm */
-:root {
-  --primary-coral: #FF6B6B;
-  --primary-blue: #4ECDC4;
-  --accent-pink: #FFE5E5;
-  --text-dark: #2C3E50;
-  --text-light: #7F8C8D;
-  --white: #FFFFFF;
-  --shadow: rgba(0, 0, 0, 0.1);
-}
-
 .main-header {
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--white) 50%);
-  box-shadow: 0 2px 10px var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid rgba(255, 107, 107, 0.1);
+  background: var(--red-50); /* fondo muy claro */
+  border-bottom: 1px solid var(--red-100);
+  width: 100%;
+  padding: 0 32px; /* Margen lateral aquí */
+  box-sizing: border-box;
 }
 
 .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  gap: 2rem;
+  width: 100%;
+  min-height: 62px;
+  gap: 0;
 }
 
-/* Sección del logo */
-
-.logo-section {
+.header-left {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Alinea a la izquierda */
-  height: 60px; /* Ajusta según diseño */
-  padding-left: 16px; /* Opcional: espacio a la izquierda */
 }
 
-.logo-icon {
-  height: 40px; /* Ajusta el tamaño del logo */
-  width: auto;
+.logo {
+  height: 45px;
+  object-fit: contain;
 }
 
-.brand-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-dark);
-}
-
-.brand-accent {
-  color: var(--primary-coral);
-}
-
-.tagline {
-  font-size: 0.875rem;
-  color: var(--text-light);
-}
-
-/* Navegación principal */
 .main-navigation {
-  flex-grow: 1;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 32px; /* Espacio entre botones */
+  margin-right: 50px; /* Separación entre menú y buscador */
 }
 
-.nav-menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 2rem;
-}
-
-.nav-item .nav-link {
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-
-.nav-item .nav-link:hover {
-  background: rgba(255, 107, 107, 0.1);
-  color: var(--primary-coral);
-}
-
-.nav-item .nav-link.active {
-  background: var(--primary-coral);
+.nav-btn {
+  background: var(--blue-600);
   color: var(--white);
-  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+  border: none;
+  border-radius: 12px;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-semiBold);
+  font-size: 1rem;
+  padding: 8px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px var(--blue-100);
 }
 
-/* Sección de búsqueda */
-.search-section {
-  flex-shrink: 0;
+.nav-btn:hover {
+  background: var(--blue-400);
 }
 
 .search-container {
   display: flex;
-  background: var(--white);
-  border-radius: 25px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-.search-container:focus-within {
-  border-color: var(--primary-coral);
+  align-items: center;
+  background: var(--blue-50);
+  border-radius: 22px;
+  border: 1px solid var(--blue-100);
+  padding: 0 8px;
+  height: 38px;
+  min-width: 220px;
+  margin-right: 16px; /* Separación entre buscador y logout */
 }
 
 .search-input {
   border: none;
   outline: none;
-  padding: 0.75rem 1rem;
-  width: 250px;
-  font-size: 0.9rem;
+  padding: 0 8px;
+  background: transparent;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  flex: 1;
 }
 
-.search-input::placeholder {
-  color: var(--text-light);
-}
-
-.search-button {
-  background: var(--primary-coral);
+.search-icon-btn {
+  background: none;
   border: none;
-  padding: 0.75rem 1rem;
   cursor: pointer;
-  color: var(--white);
-  transition: background 0.3s ease;
-}
-
-.search-button:hover {
-  background: #e55a5a;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
 }
 
 .search-icon {
-  width: 16px;
-  height: 16px;
-}
-
-/* Sección de usuario */
-.user-section {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-shrink: 0;
-}
-
-.notification-bell {
-  position: relative;
-  cursor: pointer;
-}
-
-.bell-icon {
   width: 20px;
   height: 20px;
-  color: var(--text-light);
+  stroke: var(--blue-600);
 }
 
-.notification-badge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background: var(--primary-coral);
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn {
+  background: var(--red-300);
   color: var(--white);
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  font-weight: bold;
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.user-profile:hover {
-  background: rgba(79, 205, 196, 0.1);
-}
-
-.user-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid var(--primary-blue);
-}
-
-.avatar-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.user-name {
-  font-weight: 500;
-  color: var(--text-dark);
-}
-
-.dropdown-arrow {
-  width: 16px;
-  height: 16px;
-  color: var(--text-light);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header-container {
-    padding: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .tagline {
-    display: none;
-  }
-  
-  .nav-menu {
-    gap: 1rem;
-  }
-  
-  .search-input {
-    width: 150px;
-  }
-  
-  .user-name {
-    display: none;
-  }
-}
-
-
-.logout-button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #f44336;
-  color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 22px;
+  padding: 0 18px;
+  height: 38px;
+  font-family: var(--font-main);
   font-size: 1rem;
+  font-weight: var(--font-weight-semiBold);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px var(--red-100);
   cursor: pointer;
-  transition: background 0.2s;
+  position: relative;
 }
 
-.logout-button:hover {
-  background: #d32f2f;
+.logout-btn:hover {
+  background: var(--red-400);
 }
 
-.logout-icon {
-  width: 20px;
-  height: 20px;
-  stroke-width: 2;
+@media (max-width: 900px) {
+  .main-header {
+    padding: 0 8px;
+  }
+  .header-container {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+    min-height: unset;
+  }
+  .main-navigation {
+    margin-right: 0;
+    gap: 12px;
+  }
+  .search-container {
+    margin-right: 0;
+    min-width: 150px;
+  }
 }

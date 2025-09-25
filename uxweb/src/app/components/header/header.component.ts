@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-   imports: [CommonModule, FormsModule], 
+  imports: [CommonModule, FormsModule], 
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
@@ -15,18 +15,24 @@ export class HeaderComponent {
 
   onSearch() {
     console.log('Search Query:', this.searchQuery);
-    // Implement search functionality here
+    // Implementa la funcionalidad de búsqueda aquí
   }
 
-  // Navigation methods can be added here
+  // Métodos de navegación
   navigateTo(page: string) {
     console.log('Navigating to:', page);
-    // Implement navigation functionality here
+    // Implementa la funcionalidad de navegación aquí
   }
 
-  // User profile methods can be added here
+  // Métodos de perfil de usuario
   openProfile() {
     console.log('Opening user profile');
-    // Implement user profile functionality here
+    // Implementa la funcionalidad de perfil aquí
+  }
+
+  // MÉTODO QUE SOLUCIONA TU ERROR:
+  logout() {
+    console.log('Cerrar sesión');
+    // Aquí puedes poner la lógica para cerrar sesión
   }
 }
