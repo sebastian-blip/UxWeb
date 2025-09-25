@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../components/header/header.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-programs',
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, RouterModule],
   templateUrl: './programs.component.html',
   styleUrls: ['./programs.component.css']
 })
@@ -23,10 +24,10 @@ export class ProgramsComponent {
   ];
 
   restrictions = [
-    { img: 'assets/images/restriccion-leche.jpg', alt: 'Leche' },
-    { img: 'assets/images/restriccion-almendra.jpg', alt: 'Almendra' },
-    { img: 'assets/images/restriccion-mani.jpg', alt: 'Maní' },
-    { img: 'assets/images/restriccion-fresa.jpg', alt: 'Fresa' },
+    { img: 'assets/images/alergias/alergias1.png', alt: 'Leche' },
+    { img: 'assets/images/alergias/alergias2.png', alt: 'Almendra' },
+    { img: 'assets/images/alergias/alergias3.png', alt: 'Maní' },
+    { img: 'assets/images/alergias/alergias4.png', alt: 'Fresa' },
   ];
 
   goToMenuRecommendation() {

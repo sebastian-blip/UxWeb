@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
+import { Router } from '@angular/router';
 import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
@@ -13,6 +14,7 @@ export class MenuCreatorComponent {
   // Preferencias dummy
   preferences = '';
   nutriCheck = '';
+
 
   // Categorías de menú
   categories = [
@@ -32,9 +34,11 @@ export class MenuCreatorComponent {
     { day: 'Viernes', img: 'assets/images/almuerzos/almuerzo4.png' }
   ];
 
+  constructor(private router: Router) {}
+
   saveMenu() {
-    // lógica para guardar
     console.log('Guardando menú...');
+    this.router.navigate(['/menus']);
   }
 
   adjustMenu() {

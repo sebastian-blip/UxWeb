@@ -187,6 +187,15 @@
   margin-left: 6px;
 }
 
+.mascot-img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
 @media (max-width: 900px) {
   .programs-wrapper {
     padding: 18px 10px;
@@ -227,4 +236,10 @@
     width: 24px;
     height: 24px;
   }
+    .mascot-img {
+    width: 38px;
+    height: 38px;
+  }
+
+
 }
