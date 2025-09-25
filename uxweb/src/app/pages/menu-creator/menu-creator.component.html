@@ -1,0 +1,47 @@
+<app-header></app-header>
+<div class="menu-creator-wrapper">
+  <div class="menu-creator-header">
+    <h1 class="menu-creator-title">Creador de menús inteligente</h1>
+    <img src="assets/images/iconoalarmas.png" alt="Calendario" class="menu-creator-calendar">
+  </div>
+
+  <div class="menu-creator-sections">
+    <div class="menu-creator-main">
+      <section class="preferences-section menu-card">
+        <div class="menu-card-title">Preferencias</div>
+        <div class="menu-card-desc">Descripción</div>
+      </section>
+
+      <section class="ai-menu-section">
+        <h2 class="ai-menu-title">Menú generado con Inteligencia Artificial</h2>
+        <div class="ai-menu-days">
+          <div class="ai-menu-day" *ngFor="let menu of aiMenus">
+            <div class="ai-menu-img-wrapper">
+              <img [src]="menu.img" alt="{{menu.day}}" class="ai-menu-img">
+            </div>
+            <div class="ai-menu-day-label">{{menu.day}}</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="nutri-check-section menu-card">
+        <div class="menu-card-title">Nutri-Check inteligente</div>
+        <div class="menu-card-desc">Descripción</div>
+      </section>
+    </div>
+
+    <aside class="menu-creator-categories">
+      <div class="menu-category-card">
+        <div *ngFor="let cat of categories" class="menu-category-item">
+          <span class="menu-category-icon">{{cat.key}}</span>
+          <span class="menu-category-name">{{cat.name}}</span>
+          <input type="checkbox" class="menu-category-checkbox" [checked]="cat.checked">
+        </div>
+      </div>
+      <div class="menu-category-actions">
+        <button class="adjust-btn" (click)="adjustMenu()">Ajustar</button>
+        <button class="save-btn" (click)="saveMenu()">Guardar</button>
+      </div>
+    </aside>
+  </div>
+</div>
