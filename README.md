@@ -18,25 +18,27 @@ Este proyecto tiene como objetivo implementar la maquetación de un diseño web 
 ## Estructura del Proyecto
 
 ```
-src/
-├── app/
-│   ├── components/          # Componentes reutilizables
-│   │   ├── header/
-│   │   ├── footer/
-│   │   ├── navigation/
-│   │   └── shared/
-│   ├── pages/              # Páginas principales
-│   │   ├── home/
-│   │   ├── about/
-│   │   └── contact/
-│   ├── services/           # Servicios Angular
-│   ��── models/            # Interfaces y modelos
-│   └── styles/            # Estilos globales
-├── assets/
-│   ├── images/
-│   ├── icons/
-│   └── fonts/
-└── wireframes/            # Documentación de diseño
+uxweb
+├── src/
+  ├── app/
+  │   ├── components/          # Componentes reutilizables
+  │   │   ├── header/
+  │   │   ├── footer/
+  │   │   ├── navigation/
+  │   │   └── shared/
+  │   ├── pages/              # Páginas principales
+  │   │   ├── home/
+  │   │   ├── about/
+  │   │   └── contact/
+  │   ├── services/           # Servicios Angular
+  │   ��── models/            # Interfaces y modelos
+  │   └── styles/            # Estilos globales
+  ├── assets/
+  │   ├── images/
+  │   ├── icons/
+  │   └── fonts/
+├── Diseños # Se encuentra detallado los diseños que hizo cada uno de los integrantes del grupo
+├── README
 ```
 
 ## Instalación y Configuración
@@ -53,24 +55,10 @@ git clone https://github.com/sebastian-blip/UxWeb.git
 
 # Navegar al directorio
 cd UxWeb
+cd uxweb
 
 # Instalar dependencias
 npm install
-
-# Instalar Angular CLI (si no está instalado)
-npm install -g @angular/cli
-```
-
-### Configuración del proyecto
-```bash
-# Crear nuevo proyecto Angular
-ng new uxweb-mockup --routing --style=scss
-
-# Instalar Angular Material
-ng add @angular/material
-
-# Instalar Bootstrap
-npm install bootstrap
 ```
 
 
@@ -80,20 +68,6 @@ npm install bootstrap
 # Ejecutar en modo desarrollo
 ng serve
 
-# Compilar para producción
-ng build --prod
-
-# Ejecutar tests
-ng test
-
-# Ejecutar linter
-ng lint
-
-# Generar componente
-ng generate component components/component-name
-
-# Generar servicio
-ng generate service services/service-name
 ```
 
 ## Guía de Estilos
