@@ -21,8 +21,10 @@
 }
 
 .logo {
-  height: 45px;
+  height: 70px;    
+  width: auto;        
   object-fit: contain;
+  max-width: 100%;
 }
 
 .main-navigation {
