@@ -1,43 +1,67 @@
-<div class="home-container">
+<div class="home">
+  <div class="main-section">
+     <div class="left-column">
+      <!-- Sección Crea tu plato -->
+      <section class="section carousel-section">
+        <h2>Crea tu plato</h2>
+        <div class="carousel">
+          <button class="nav-btn">‹</button>
+          <div class="items">
+            <mat-card class="meal-card">
+              <img mat-card-image src="assets/images/home/platoFuerte.png" alt="Plato Fuerte" />
+              <mat-card-content>Plato Fuerte</mat-card-content>
+            </mat-card>
+            <mat-card class="meal-card">
+              <img mat-card-image src="assets/images/home/desayuno.png" alt="Desayuno" />
+              <mat-card-content>Desayuno</mat-card-content>
+            </mat-card>
+            <mat-card class="meal-card">
+              <img mat-card-image src="assets/images/home/Snack.png" alt="Snack" />
+              <mat-card-content>Snack</mat-card-content>
+            </mat-card>
+          </div>
+          <button class="nav-btn">›</button>
+        </div>
+      </section>
 
-  <!-- Sección: Crea tu plato -->
-  <section class="create-plate">
-    <h2>Crea tu plato</h2>
-    <div class="categories">
-      <!-- Carrousel -->
-      <div class="category">Plato</div>
-      <div class="category">Desayuno</div>
-      <div class="category">Snack</div>
-      <div class="category">Cena</div>
+      <!-- Sección Favoritos -->
+      <section class="section favorites-section">
+        <h2>Favoritos</h2>
+        <div class="favorites">
+          <mat-card class="fav-card">
+            <img mat-card-image src="assets/images/home/platoFavorito1.png" alt="Favorito 1" />
+          </mat-card>
+          <mat-card class="fav-card">
+            <img mat-card-image src="assets/images/home/platoFavorito2.png" alt="Favorito 2" />
+          </mat-card>
+          <mat-card class="fav-card">
+            <img mat-card-image src="assets/images/home/platoFavorito3.png" alt="Favorito 3" />
+          </mat-card>
+        </div>
+      </section>
+    </div>
+
+    <!-- Sección Recomendados del día -->
+    <section class="section recommended">
+      <h2>Recomendados del día</h2>
+      <h3>Alta nutrición</h3>
+      <mat-card class="rec-card">
+        <img
+          mat-card-image
+          src="assets/images/home/recomendadosDelDia.png"
+          alt="Recomendado"
+        />
+        <mat-card-actions>
+          <button mat-raised-button class="btn-know">Conocer más</button>
+          <button mat-stroked-button class="btn-next">Siguiente</button>
+        </mat-card-actions>
+      </mat-card>
+    </section>
+  </div>
+  <!-- Pregunta IA  -->
+  <section class="section feeling">
+    <div class="feeling-box">
+      ¿Cómo te sientes hoy lunes?
     </div>
   </section>
-
-  <!-- Sección: Favoritos -->
-  <section class="favorites">
-    <h2>Favoritos</h2>
-    <div class="favorites-grid">
-      <!-- Cards de favoritos -->
-      <div class="favorite-card">Favorito 1</div>
-      <div class="favorite-card">Favorito 2</div>
-      <div class="favorite-card">Favorito 3</div>
-    </div>
-  </section>
-
-  <!-- Sección: Recomendados del día -->
-  <section class="recommended">
-    <h2>Recomendados del día</h2>
-    <div class="recommended-card">
-      <div class="image"></div>
-      <div class="info">
-        <p>Plato recomendado</p>
-        <button>Ver más</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección: Mensaje del día -->
-  <section class="daily-message">
-    <p>¿Cómo te sientes hoy lunes?</p>
-  </section>
-
 </div>
