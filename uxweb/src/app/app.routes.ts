@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { HeaderComponent } from './components/header/header.component';
+import { MenusPageComponent } from './pages/menus-page/menus-page.component';
 
 export const routes: Routes = [
-  { path: '', component: HeaderComponent },
+  { path: 'menus', component: MenusPageComponent },
   // ... otras rutas
 ];

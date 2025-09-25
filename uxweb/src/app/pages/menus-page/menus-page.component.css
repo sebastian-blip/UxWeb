@@ -1,0 +1,124 @@
+.menus-wrapper {
+  background: var(--red-50);
+  min-height: 100vh;
+  padding: 32px 48px 24px 48px;
+  box-sizing: border-box;
+}
+
+.menus-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.menus-title {
+  font-size: var(--font-size-title);
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.recommendation-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.recommend-btn {
+  background: var(--blue-600);
+  color: var(--white);
+  font-size: 1.3rem;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-semiBold);
+  border: none;
+  border-radius: 11px;
+  padding: 16px 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px var(--blue-100);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.recommend-btn:hover {
+  background: var(--blue-400);
+  box-shadow: 0 4px 16px var(--blue-100);
+}
+
+.arrow {
+  font-size: 2rem;
+  color: var(--red-300);
+  margin-left: 8px;
+}
+
+.mascot-img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.menus-section {
+  margin-bottom: 32px;
+}
+
+.menus-subtitle {
+  font-size: var(--font-size-subtitle);
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-semiBold);
+  margin-bottom: 16px;
+  color: var(--gray-500);
+}
+
+.menus-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 8px;
+}
+
+.menu-img {
+  width: 140px;
+  height: 120px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px var(--shadow);
+  background: var(--white);
+  transition: transform 0.15s;
+}
+
+.menu-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 16px var(--red-100);
+}
+
+@media (max-width: 900px) {
+  .menus-wrapper {
+    padding: 18px 12px;
+  }
+  .menus-header-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+  .menus-grid {
+    gap: 14px;
+  }
+  .menu-img {
+    width: 100px;
+    height: 75px;
+  }
+  .recommend-btn {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+  .mascot-img {
+    width: 38px;
+    height: 38px;
+  }
+}
