@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="programs-wrapper">
+  <div class="programs-header">
+    <img src="assets/images/calendario-alarma.png" alt="Calendario" class="programs-calendar">
+    <h1 class="programs-title">Estos son tus programas</h1>
+  </div>
+  <div class="programs-content">
+    <div class="programs-main">
+      <h2 class="programs-section-title">Programas para hoy</h2>
+      <div class="programs-today-list">
+        <div class="program-card blue" *ngFor="let program of todayPrograms">
+          <div class="program-img">
+            <img [src]="program.img" alt="Imagen Programa" />
+          </div>
+          <div class="program-title">{{program.title}}</div>
+        </div>
+      </div>
+      <h2 class="programs-section-title">Semanales</h2>
+      <div class="programs-weekly-list">
+        <span class="arrow arrow-left">&#60;</span>
+        <div class="program-card red" *ngFor="let program of weeklyPrograms">
+          <div class="program-img">
+            <img [src]="program.img" alt="Imagen Programa" />
+          </div>
+          <div class="program-title">{{program.title}}</div>
+        </div>
+        <span class="arrow arrow-right">&#62;</span>
+      </div>
+    </div>
+    <aside class="programs-aside">
+      <div class="restrictions">
+        <div class="restrictions-title">No olvides<br>tus restricciones</div>
+        <div class="restrictions-imgs">
+          <img *ngFor="let r of restrictions" [src]="r.img" [alt]="r.alt" class="restrictions-img" />
+        </div>
+      </div>
+      <div class="recommend-menu-btn-row">
+        <button class="recommend-btn" routerLink="/Recomendaciones">
+          Recuémdame un menú <span class="arrow arrow-btn">&#8594;</span>
+        </button>
+        <img src="assets/images/avatar-mascota.png" alt="Mascota" class="recommend-avatar" />
+      </div>
+    </aside>
+  </div>
+</div>

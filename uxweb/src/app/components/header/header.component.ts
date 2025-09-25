@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  imports: [CommonModule, FormsModule], 
+  imports: [CommonModule, FormsModule, RouterModule], 
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
