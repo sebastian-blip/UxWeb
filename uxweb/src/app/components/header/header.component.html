@@ -1,54 +1,38 @@
 <header class="main-header">
   <div class="header-container">
-    
-    <!-- Logo y título -->
-    <div class="logo-section">
-      <img src="/assets/images/logo-icon.png"  class="logo-icon">
+    <!-- Logo-->
+    <div class="header-left">
+      <img src="/assets/images/logo-nutrialarm.png" class="logo" alt="nutriAlarm">
     </div>
-
-    <!-- Navegación principal -->
+    
+    <!-- Navegación centrada -->
     <nav class="main-navigation">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="#home" class="nav-link active" (click)="navigateTo('home')">Menùs</a>
-        </li>
-        <li class="nav-item">
-          <a href="#menus" class="nav-link" (click)="navigateTo('menus')">Progreso</a>
-        </li>
-        <li class="nav-item">
-          <a href="#nutrition" class="nav-link" (click)="navigateTo('nutrition')">Programas</a>
-        </li>
-      </ul>
+      <button class="nav-btn">Menús</button>
+      <button class="nav-btn">Progreso</button>
+      <button class="nav-btn">Programas</button>
     </nav>
 
-    <!-- Sección de búsqueda -->
-    <div class="search-section">
-      <div class="search-container">
-        <input 
-          type="text" 
-          class="search-input"
-          placeholder="Buscar menús, ingredientes..."
-          [(ngModel)]="searchQuery"
-          (keyup.enter)="onSearch()">
-        <button class="search-button" (click)="onSearch()">
-          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.35-4.35"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <div class="user-section">
-      <button class="logout-button">
-        Cerrar sesión
-        <svg class="logout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path d="M16 17l5-5m0 0l-5-5m5 5H9"></path>
-          <path d="M13 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-2"></path>
+    <!-- Buscador -->
+    <div class="search-container">
+      <input 
+        type="text" 
+        class="search-input"
+        placeholder="Buscar"
+        [(ngModel)]="searchQuery"
+        (keyup.enter)="onSearch()">
+      <button class="search-icon-btn" (click)="onSearch()">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
         </svg>
       </button>
     </div>
 
-
+    <!-- Botón de cerrar sesión con avatar derecha -->
+    <div class="header-right">
+      <button class="logout-btn" (click)="logout()">
+        Cerrar sesión
+      </button>
+    </div>
   </div>
 </header>

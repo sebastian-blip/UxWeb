@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Escala de colores NutriAlarm */
+:root {
+  /* Rojos */
+  --red-50: #FFF6F5;
+  --red-100: #FEC4BF;
+  --red-200: #FDA87C;
+  --red-300: #F14813;
+  --red-400: #B3330B;
+  --red-500: #791F05;
+  --red-600: #430D01;
+
+  /* Azules */
+  --blue-50: #E2F3FF;
+  --blue-100: #A4DDFE;
+  --blue-200: #13BCF1;
+  --blue-300: #0C94BE;
+  --blue-400: #076D8D;
+  --blue-500: #03495F;
+  --blue-600: #012735;
+
+  /* Grises */
+  --gray-50: #F1F0F0;
+  --gray-100: #D4D1D0;
+  --gray-200: #B0A9A8;
+  --gray-300: #8E8281;
+  --gray-400: #685F5E;
+  --gray-500: #443E3D;
+  --gray-600: #24201F;
+
+  /* Tipografía */
+  --font-main: 'Inter', Arial, sans-serif;
+  --font-size-title: 48px;
+  --font-size-subtitle: 36px;
+  --font-size-body: 24px;
+  --font-size-general: 20px;
+  --font-size-button: 20px;
+  --font-size-regular: 32px;
+  --font-size-card: 32px;
+  --font-weight-regular: 400;
+  --font-weight-semiBold: 600;
+  --font-weight-bold: 700;
+
+  /* Otros */
+  --white: #FFFFFF;
+  --shadow: rgba(0, 0, 0, 0.1);
+}

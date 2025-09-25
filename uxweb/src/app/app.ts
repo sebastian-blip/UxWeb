@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MenuComponent } from './pages/menu/menu.component'; // <-- Importa tu componente
+import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,               // <-- Asegúrate de poner esto si es standalone
-  imports: [RouterOutlet, MenuComponent], // <-- Agrega MenuComponent aquí
+  imports: [RouterOutlet, HeaderComponent], // <-- Agrega MenuComponent aquí
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
