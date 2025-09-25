@@ -25,6 +25,6 @@ export class MenusPageComponent {
   }
 
   goToRecommendation() {
-    this.router.navigate(['/recomendaciones']);
+    this.router.navigate(['/Recomendaciones']);
   }
 }

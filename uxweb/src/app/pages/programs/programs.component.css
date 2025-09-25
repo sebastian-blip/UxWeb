@@ -1,0 +1,245 @@
+.programs-wrapper {
+  background: var(--red-50);
+  min-height: 100vh;
+  padding: 32px 48px 24px 48px;
+  box-sizing: border-box;
+}
+
+.programs-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 38px;
+}
+
+.programs-calendar {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+}
+
+.programs-title {
+  font-size: 2.3rem;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-700);
+  margin: 0;
+}
+
+.programs-content {
+  display: flex;
+  gap: 38px;
+  align-items: flex-start;
+}
+
+.programs-main {
+  flex: 1;
+}
+
+.programs-section-title {
+  font-size: 1.32rem;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-semiBold);
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.programs-today-list,
+.programs-weekly-list {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 42px;
+}
+
+.program-card {
+  width: 210px;
+  height: 190px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px var(--blue-100);
+  transition: transform 0.13s;
+  cursor: pointer;
+}
+
+.program-card.blue {
+  background: #eaf7ff; /* var(--blue-50) */
+}
+
+.program-card.red {
+  background: #ffeaea; /* var(--red-100) */
+}
+
+.program-img {
+  width: 74px;
+  height: 74px;
+  margin-bottom: 12px;
+  background: #f3f3f3;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.program-img img {
+  width: 60px;
+  height: 60px;
+  opacity: 0.45;
+}
+
+.program-title {
+  font-size: 1.13rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-main);
+  color: var(--gray-700);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.arrow {
+  font-size: 2.1rem;
+  color: var(--gray-400);
+  cursor: pointer;
+  user-select: none;
+  padding: 0 12px;
+}
+.arrow-btn {
+  font-size: 1.5rem;
+  color: var(--red-400);
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.programs-aside {
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.restrictions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.restrictions-title {
+  font-size: 1.18rem;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-700);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.restrictions-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.restrictions-img {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px var(--red-100);
+}
+
+.recommend-menu-btn-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 14px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.recommend-btn {
+  background: var(--blue-600);
+  color: var(--white);
+  border: none;
+  border-radius: 16px;
+  font-family: var(--font-main);
+  font-size: 1.07rem;
+  font-weight: var(--font-weight-semiBold);
+  padding: 14px 32px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px var(--blue-100);
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+}
+.recommend-btn:hover {
+  background: var(--blue-400);
+}
+
+.recommend-avatar {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  margin-left: 6px;
+}
+
+.mascot-img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+@media (max-width: 900px) {
+  .programs-wrapper {
+    padding: 18px 10px;
+  }
+  .programs-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .programs-aside {
+    min-width: unset;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .restrictions-img {
+    width: 54px;
+    height: 54px;
+  }
+  .recommend-menu-btn-row {
+    margin-top: 0;
+    justify-content: flex-end;
+  }
+  .recommend-avatar {
+    width: 34px;
+    height: 34px;
+  }
+  .program-card {
+    width: 110px;
+    height: 94px;
+  }
+  .program-img {
+    width: 34px;
+    height: 34px;
+  }
+  .program-img img {
+    width: 24px;
+    height: 24px;
+  }
+    .mascot-img {
+    width: 38px;
+    height: 38px;
+  }
+
+
+}
