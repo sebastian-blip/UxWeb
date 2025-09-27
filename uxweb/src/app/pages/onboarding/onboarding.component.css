@@ -1,0 +1,8 @@
+:host {
+    display: block;
+    min-height: 100vh;  
+    background-color: var(--red-25);  
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;  
+    box-sizing: border-box;
+  }
