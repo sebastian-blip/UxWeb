@@ -20,18 +20,20 @@
         <div class="carousel">
           <button class="nav-btn">‹</button>
           <div class="items">
-            <mat-card class="meal-card">
+            <mat-card class="meal-card" [routerLink]="['/menucustom']">
               <img mat-card-image src="assets/images/home/platoFuerte.png" alt="Plato Fuerte" />
-              <mat-card-content class="text-semiBold">Plato Fuerte</mat-card-content>
+              <mat-card-content text-semiBold>Plato Fuerte</mat-card-content>
             </mat-card>
-            <mat-card class="meal-card">
+            
+            <mat-card class="meal-card" [routerLink]="['/menucustom']">
               <img mat-card-image src="assets/images/home/desayuno.png" alt="Desayuno" />
-              <mat-card-content class="text-semiBold">Desayuno</mat-card-content>
+              <mat-card-content text-semiBold>Desayuno</mat-card-content>
             </mat-card>
-            <mat-card class="meal-card">
+            
+            <mat-card class="meal-card" [routerLink]="['/menucustom']">
               <img mat-card-image src="assets/images/home/Snack.png" alt="Snack" />
-              <mat-card-content class="text-semiBold">Snack</mat-card-content>
-            </mat-card>
+              <mat-card-content text-semiBold>Snack</mat-card-content>
+            </mat-card>            
           </div>
           <button class="nav-btn">›</button>
         </div>
