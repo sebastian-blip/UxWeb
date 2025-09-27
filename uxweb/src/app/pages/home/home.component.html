@@ -3,7 +3,7 @@
 
 <!-- Barra de iconos solo para Home -->
 <div class="page-icons">
-  <button class="icon-btn" aria-label="Volver">
+  <button class="icon-btn" routerLink="/" aria-label="Volver">
     <mat-icon>arrow_back</mat-icon>
   </button>
   <img src="assets/images/iconoalarmas.png" alt="Alarmas" class="alarm">
@@ -68,8 +68,8 @@
         />
         <mat-card-actions>
           <div class="actions-right">
-            <button mat-raised-button class="btn-know text-button">Conocer más</button>
-            <button mat-stroked-button class="btn-next text-button">Siguiente</button>
+             <button mat-raised-button class="btn-know text-button" routerLink="/Recomendaciones">Conocer más</button>
+            <button  class="btn-next text-button">Siguiente</button>
           </div>
         </mat-card-actions>      
       </mat-card>

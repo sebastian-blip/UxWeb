@@ -26,15 +26,21 @@
   padding: 0 16px; 
 }
 
-.icon-btn mat-icon {
-  background-color: var(--red-25);  
-  border: none;
-  cursor: pointer;
-  font-size: 48px; 
-  padding: 0; 
-  width: 48px;
-  height: 48px;
-  line-height: 48px;  
+.icon-btn {
+  background: none !important;      
+  border: none !important;         
+  box-shadow: none !important;      
+  border-radius: 0 !important;      
+  padding: 0 !important;  
+  cursor: pointer !important;         
+}
+
+.icon-btn:hover,
+.icon-btn:focus,
+.icon-btn:active {
+  background: none !important;      
+  box-shadow: none !important;      
+  border: none !important;          
 }
 
 .alarm {
