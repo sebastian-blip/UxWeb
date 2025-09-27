@@ -7,11 +7,13 @@ import { MenuCustomComponent } from './pages/menu-custom/menu-custom.component.j
 import { OnboardingComponent } from './pages/onboarding/onboarding.component';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'onboarding', pathMatch: 'full' },
   { path: 'menus', component: MenusPageComponent },
   { path: 'Recomendaciones', component: MenuCreatorComponent}, 
   { path: 'Programas', component: ProgramsComponent},
   { path: 'home', component: HomeComponent},
   { path: 'menucustom', component: MenuCustomComponent},
-  { path: 'onboarding', component: OnboardingComponent}
+  { path: 'onboarding', component: OnboardingComponent},
+  { path: '**', redirectTo: 'onboarding' }  
   // ... otras rutas
 ];

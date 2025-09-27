@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router  } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../components/header/header.component';
 
@@ -8,17 +8,20 @@ import { HeaderComponent } from '../../components/header/header.component';
   standalone: true,
   imports: [
     CommonModule,
-    HeaderComponent,
-    RouterModule
+    HeaderComponent 
   ],
   templateUrl: './onboarding.component.html',
   styleUrls: ['./onboarding.component.css']
 })
 export class OnboardingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {} 
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
-  ngOnInit() {
+  goToNext() {
+    this.router.navigate(['/home']);  
   }
 
 }
