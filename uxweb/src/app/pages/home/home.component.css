@@ -1,69 +1,240 @@
-.home-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem 2rem;
-  }
-  
-  /* Títulos de cada sección */
-  section h2 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  
-  /* Crea tu plato */
-  .categories {
-    display: flex;
-    gap: 1rem;
-  }
-  .category {
-    background: #f1f1f1;
-    padding: 1rem;
-    border-radius: 8px;
-    min-width: 100px;
-    text-align: center;
-  }
-  
-  /* Favoritos */
-  .favorites-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 1rem;
-  }
-  .favorite-card {
-    background: #fafafa;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  /* Recomendados */
-  .recommended-card {
-    display: flex;
-    gap: 1rem;
-    background: #fefefe;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-  }
-  .recommended-card .image {
-    width: 100px;
-    height: 100px;
-    background: #ccc;
-    border-radius: 8px;
-  }
-  .recommended-card .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  /* Mensaje del día */
-  .daily-message {
-    text-align: center;
-    font-size: 1.2rem;
-    font-style: italic;
-  }
-  
+
+/* Tipografía contenedor raíz del componente */
+:host {
+  display: block;
+  min-height: 100vh;  
+  background-color: var(--red-25);  
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;  
+  box-sizing: border-box;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.page-icons {
+  left: 8px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  width: 100%;  
+  padding: 0 16px; 
+}
+
+.icon-btn mat-icon {
+  background-color: var(--red-25);  
+  border: none;
+  cursor: pointer;
+  font-size: 48px; 
+  padding: 0; 
+  width: 48px;
+  height: 48px;
+  line-height: 48px;  
+}
+
+.alarm {
+  width: 110px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Contenedor principal que divide en columnas */
+.main-section {
+  display: flex;
+  gap: 100px;   
+  align-items: flex-start;
+}
+
+/* Columna izquierda con los carruseles */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; 
+}
+
+
+/* Contenedor del carrusel */
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: auto;  
+}
+
+/* Contenedor de las cards */
+.items {
+  display: flex;
+  gap: 36px;
+}
+
+/* Tamaño de las cards */
+.meal-card {
+  position: relative;
+  flex: 0 0 266px;    
+  height: 242px;     
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; 
+}
+
+/* Imagen dentro de la card */
+.meal-card img {
+  width: 100%;
+  height: 100%;        
+  object-fit: cover;   
+  border-radius: 10px;
+}
+
+/* Contenido de la card */
+.meal-card mat-card-content {
+  position: absolute;        
+  bottom: 8px;               
+  left: 8px;                 
+  right: 8px;                
+  text-align: left;         
+  color: white;             
+  font-size: 32px;
+  pointer-events: none;     
+  background: rgba(0, 0, 0, 0.2);  
+  padding: 4px 8px;          
+  border-radius: 10px;        
+}
+
+.actions-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 12px;
+}
+
+
+/* Botones de navegación */
+.nav-btn {
+  background-color: var(--red-25);
+  border: none;
+  font-size: 64px;
+  cursor: pointer;
+  height: 242px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Carrusel de favoritos */
+.favorites {
+  display: flex;
+  gap: 15px;
+  padding-left: 40px;   
+  overflow-x: auto;   
+}
+
+
+.fav-card {
+  width: 266px;   
+  height: 180px;     
+  cursor: pointer;
+  border-radius: 10px; 
+  overflow: hidden;     
+  position: relative;    
+}
+
+.fav-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    
+  border-radius: 10px;  
+}
+
+.favorites {
+  display: flex;
+  gap: 36px; 
+}
+
+
+/* Recomendados del día */
+.recommended {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 0;
+  padding-top: 40px;  
+}
+
+
+/* Cards de recomendados */
+.rec-card {
+  width: 400px;
+  max-width: 400px;
+  border-radius: 10px;
+  background-color: var(--blue-50);  
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Acciones dentro de las cards */
+.rec-card mat-card-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+ 
+/* Botón "Conocer más" (naranja/rojo) */
+.btn-know {
+  background-color: var(--red-300)!important;
+  color: #fff !important;
+  border-radius: 50px;
+  padding: 6px 16px;
+}
+
+.btn-know:hover {
+  background-color: var( --red-300) !important;
+}
+
+/* Botón "Siguiente" (negro) */
+.btn-next {
+  background-color: var(--blue-600) !important;
+  color: #fff !important;
+  border-radius: 50px;
+  padding: 6px 16px;
+}
+
+.btn-next:hover {
+  background-color: #333 !important;
+}
+
+
+
+/* Columna derecha */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;  
+  flex: 1;   
+}
+
+.feeling {
+  margin-top: 0;  
+}
+
+.feeling-box {
+  display: inline-block;
+  background: var(--blue-600);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+}

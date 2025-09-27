@@ -3,13 +3,15 @@
 /* Escala de colores NutriAlarm */
 :root {
   /* Rojos */
+  --red-25: #FFFAFA;
   --red-50: #FFF6F5;
   --red-100: #FEC4BF;
   --red-200: #FDA87C;
   --red-300: #F14813;
-  --red-400: #B3330B;
+  --red-400: #B3330B; 
   --red-500: #791F05;
   --red-600: #430D01;
+  
 
   /* Azules */
   --blue-50: #E2F3FF;
@@ -46,5 +48,82 @@
   --white: #FFFFFF;
   --shadow: rgba(0, 0, 0, 0.1);
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* ==== Tipografía Global ==== */
+
+/* Fuente base */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #3d0a0a;
+  font-family: 'Roboto', sans-serif;
+  color: #111; /* color base */
+}
+
+/* Título Principal */
+.title-lg {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;   /* Bold */
+  font-size: 48px;
+  line-height: 20px;
+  color: #111;
+}
+
+/* Subtítulo */
+.title-md {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;   /* SemiBold */
+  font-size: 36px;
+  line-height: 40px;
+  color: #222;
+}
+
+/* Texto Regular grande */
+.text-regular {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;   /* Regular */
+  font-size: 32px;
+  line-height: 30px;
+  color: #333;
+ }
+
+/* Texto Regular mediano */
+.text-md {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;   /* Medio */
+  font-size: 32px;
+  line-height: 30px;
+  color: var(--blue-600);
+  margin: 48px 0 0 0;
+
+}
+
+/* Texto SemiBold */
+.text-semiBold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;   /* SemiBold */
+  font-size: 32px;
+  line-height: 30px;
+  color: #111;
+}
+
+/* Texto general (párrafos, labels, etc.) */
+.text-body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;  
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--blue-600);
+}
+
+/* Texto en botones */
+.text-button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+   color: #fff;  
+}

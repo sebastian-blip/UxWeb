@@ -1,43 +1,78 @@
-<div class="home-container">
+<!-- Header global -->
+<app-header></app-header>
 
-  <!-- Sección: Crea tu plato -->
-  <section class="create-plate">
-    <h2>Crea tu plato</h2>
-    <div class="categories">
-      <!-- Carrousel -->
-      <div class="category">Plato</div>
-      <div class="category">Desayuno</div>
-      <div class="category">Snack</div>
-      <div class="category">Cena</div>
+<!-- Barra de iconos solo para Home -->
+<div class="page-icons">
+  <button class="icon-btn" aria-label="Volver">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <img src="assets/images/iconoalarmas.png" alt="Alarmas" class="alarm">
+</div>
+
+<!-- Contenido principal -->
+<div class="home">
+  <div class="main-section">
+    <!-- Columna izquierda -->
+    <div class="left-column">
+      <!-- Sección Crea tu plato -->
+      <section class="section carousel-section">
+        <h2 class="title-lg">Crea tu plato</h2>
+        <div class="carousel">
+          <button class="nav-btn">‹</button>
+          <div class="items">
+            <mat-card class="meal-card" [routerLink]="['/menucustom']">
+              <img mat-card-image src="assets/images/home/platoFuerte.png" alt="Plato Fuerte" />
+              <mat-card-content text-semiBold>Plato Fuerte</mat-card-content>
+            </mat-card>
+            
+            <mat-card class="meal-card" [routerLink]="['/menucustom']">
+              <img mat-card-image src="assets/images/home/desayuno.png" alt="Desayuno" />
+              <mat-card-content text-semiBold>Desayuno</mat-card-content>
+            </mat-card>
+            
+            <mat-card class="meal-card" [routerLink]="['/menucustom']">
+              <img mat-card-image src="assets/images/home/Snack.png" alt="Snack" />
+              <mat-card-content text-semiBold>Snack</mat-card-content>
+            </mat-card>            
+          </div>
+          <button class="nav-btn">›</button>
+        </div>
+      </section>
+
+      <!-- Sección Favoritos -->
+      <section class="section favorites-section">
+        <h2 class="title-md">Favoritos</h2>
+        <div class="favorites">
+          <mat-card class="fav-card">
+            <img mat-card-image src="assets/images/home/platoFavorito1.png" alt="Favorito 1" />
+          </mat-card>
+          <mat-card class="fav-card">
+            <img mat-card-image src="assets/images/home/platoFavorito2.png" alt="Favorito 2" />
+          </mat-card>
+          <mat-card class="fav-card">
+            <img mat-card-image src="assets/images/home/platoFavorito3.png" alt="Favorito 3" />
+          </mat-card>
+        </div>
+      </section>
     </div>
-  </section>
 
-  <!-- Sección: Favoritos -->
-  <section class="favorites">
-    <h2>Favoritos</h2>
-    <div class="favorites-grid">
-      <!-- Cards de favoritos -->
-      <div class="favorite-card">Favorito 1</div>
-      <div class="favorite-card">Favorito 2</div>
-      <div class="favorite-card">Favorito 3</div>
-    </div>
-  </section>
-
-  <!-- Sección: Recomendados del día -->
-  <section class="recommended">
-    <h2>Recomendados del día</h2>
-    <div class="recommended-card">
-      <div class="image"></div>
-      <div class="info">
-        <p>Plato recomendado</p>
-        <button>Ver más</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección: Mensaje del día -->
-  <section class="daily-message">
-    <p>¿Cómo te sientes hoy lunes?</p>
-  </section>
-
+    <!-- Columna central: Recomendados del día -->
+    <section class="section recommended">
+      <mat-card class="rec-card">
+        <h2 class="title-md">Recomendados del día</h2> 
+        <h3 class="subtitle-section">Alta nutrición</h3>
+        <img
+          mat-card-image
+          src="assets/images/home/recomendadosDelDia.png"
+          alt="Recomendado"
+        />
+        <mat-card-actions>
+          <div class="actions-right">
+            <button mat-raised-button class="btn-know text-button">Conocer más</button>
+            <button mat-stroked-button class="btn-next text-button">Siguiente</button>
+          </div>
+        </mat-card-actions>      
+      </mat-card>
+    </section>
+  </div>
 </div>
